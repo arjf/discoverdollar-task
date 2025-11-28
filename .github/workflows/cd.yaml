@@ -21,7 +21,11 @@ jobs:
           port: 22
           script: |
             set -e
-            mkdir -p ~/app
+
+            if [ ! -d ~/app ]; then
+              git clone https://github.com/${{ github.repository }} ~/app
+            fi
+
             cd ~/app
             git pull origin main
 
