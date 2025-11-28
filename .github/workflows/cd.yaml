@@ -17,10 +17,11 @@ jobs:
           host: ${{ secrets.VM_HOST }}
           username: ${{ secrets.VM_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          debug: true
+          # debug: true
           port: 22
           script: |
             set -e
+            mkdir -p ~/app
             cd ~/app
             git pull origin main
 
