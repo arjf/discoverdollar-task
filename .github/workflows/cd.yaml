@@ -1,0 +1,29 @@
+name: CD
+
+on:
+  workflow_run:
+    workflows: ["CI"] # autorun after ci
+    types: [completed]
+    branches: ["main"]
+  workflow_dispatch:
+jobs:
+  deploy:
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VM_HOST }}
+          username: ${{ secrets.VM_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          script: |
+            set -e
+            cd ~/app
+            git pull origin main
+
+            docker compose pull
+            docker compose up -d --remove-orphans
+
+            docker system prune -f

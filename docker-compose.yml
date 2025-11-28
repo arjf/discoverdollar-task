@@ -15,7 +15,7 @@ services:
       mean-network:
 
   frontend:
-    image: arjf/crud-dd-task-mean-frontend:latest
+    image: arjf/crud-dd-task-mean-frontend:dev
     container_name: mean-frontend
     restart: always
     depends_on:
@@ -26,7 +26,7 @@ services:
       mean-network:
 
   backend:
-    image: arjf/crud-dd-task-mean-backend:latest
+    image: arjf/crud-dd-task-mean-backend:dev
     container_name: mean-backend
     restart: always
     environment:
