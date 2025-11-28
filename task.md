@@ -56,4 +56,4 @@ Please share the GitHub repository link once you’ve completed the task. Make s
 Please do not delete the cloud infrastructure after completing the task. In the next round, you may be required to demonstrate your CI/CD setup in real-time. You can stop the server, but make sure it’s available to restart when needed.
 Kindly submit your assignment by tomorrow (28th Nov 2025) 6PM.
 Please submit your GitHub repository URL using the following form:
-🔗DevOps Internship Assignment Submission_27th Nov 2025 – Fill out form
+🔗DevOps Internship Assignment Submission_27th Nov 2025 – Fill out form (https://forms.office.com/pages/responsepage.aspx?id=JFcuFV4pQUWLO5ts4aMZJzlLZC67UBJGnjlu-jxpKIFURVA0NUQ3T1g1QkJUQVBTMzdTTlMzNkNRNi4u&route=shorturl)
