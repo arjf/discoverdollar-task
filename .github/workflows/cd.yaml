@@ -29,6 +29,11 @@ jobs:
             cd ~/app
             git pull origin main
 
+            cp .env.example .env || true
+            sed -i "s|__MONGO_USER__|$MONGO_USER|g" .env
+            sed -i "s|__MONGO_PASS__|$MONGO_PASS|g" .env
+            sed -i "s|__MONGO_DB__|$MONGO_DB|g" .env
+
             docker compose pull
             docker compose up -d --remove-orphans
 
