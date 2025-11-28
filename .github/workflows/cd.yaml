@@ -19,6 +19,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           # debug: true
           port: 22
+          envs: MONGO_USER,MONGO_PASS,MONGO_DB
           script: |
             set -e
 
