@@ -2,6 +2,10 @@
 
 This repository contains the containerized deployment of the provided MEAN CRUD application, deployed on AWS EC2 with CI/CD automation using GitHub Actions.
 
+## Live Instance
+
+The application is deployed and accessible at: http://16.112.65.124/
+
 ## Technology Stack
 
 | Component | Technology |
